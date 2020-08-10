@@ -23,6 +23,9 @@
     "shards-react": "^1.0.3",
     "shortid": "^2.2.15"
   },
+  "engines": {
+    "node": "12.18.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build:prod": "cross-env REACT_APP_BASENAME=/demo/shards-dashboard-lite-react REACT_APP_GAID=UA-115105611-1 npm run build",
