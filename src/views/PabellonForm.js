@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 
 
-import PageTitle from "../components/common/PageTitle";
+
 import pabellonService from "../services/pabellon.service";
 
 class PabellonForm extends Component {
@@ -50,6 +50,7 @@ class PabellonForm extends Component {
             if (response.data != null) {
                 this.setState(this.initialState);
                 alert("Pabellon Agregado");
+                this.props.history.push('/pabellones');
             }
         });
   }
@@ -79,6 +80,7 @@ class PabellonForm extends Component {
             if (response.data != null) {
                 this.setState(this.initialState);
                 alert("Pabellon Editado");
+                this.props.history.push('/pabellones');
             }
         });
     }
@@ -88,9 +90,6 @@ class PabellonForm extends Component {
     return (
       <Container fluid className="main-content-container px-4 pb-4">
         {/* Page Header */}
-        <Row noGutters className="page-header py-4">
-          <PageTitle sm="4" title="Agregar Nuevo Pabellon" subtitle="" className="text-sm-left" />
-        </Row>
         <Row>
           <Col lg={12} style={{ marginTop: "20px" }}>
             <Card>

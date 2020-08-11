@@ -48,7 +48,8 @@ class CamaForm extends Component {
         .then(response => {
             if (response.data != null) {
                 this.setState(this.initialState);
-                alert("Sala de Recuperación Agregado");
+                alert("Cama Creada");
+                this.props.history.push('/camas-recuperacion');
             }
         });
   }

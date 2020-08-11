@@ -35,6 +35,9 @@ class Pabellones extends Component {
     pabellonService.deletePabellon(pabellonId)
         .then((response) => console.log(response))
         .catch((error) => console.log(error));
+    this.setState({
+      pabellones: this.state.pabellones.filter(pabellon => pabellon.id !== pabellonId)
+    });
 }
 
   render() {

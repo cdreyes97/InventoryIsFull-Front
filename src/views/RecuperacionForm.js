@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 
 
-import PageTitle from "../components/common/PageTitle";
+
 import recuperacionService from "../services/recuperacion.service";
 
 class RecuperacionForm extends Component {
@@ -50,6 +50,7 @@ class RecuperacionForm extends Component {
             if (response.data != null) {
                 this.setState(this.initialState);
                 alert("Sala de Recuperación Agregado");
+                this.props.history.push('/recuperacion');
             }
         });
   }
@@ -79,6 +80,7 @@ class RecuperacionForm extends Component {
             if (response.data != null) {
                 this.setState(this.initialState);
                 alert("Recuperacion Editado");
+                this.props.history.push('/recuperacion');
             }
         });
     }
@@ -88,9 +90,6 @@ class RecuperacionForm extends Component {
     return (
       <Container fluid className="main-content-container px-4 pb-4">
         {/* Page Header */}
-        <Row noGutters className="page-header py-4">
-          <PageTitle sm="4" title="Agregar Nueva Sala de Recuperacion" subtitle="" className="text-sm-left" />
-        </Row>
         <Row>
           <Col lg={12} style={{ marginTop: "20px" }}>
             <Card>

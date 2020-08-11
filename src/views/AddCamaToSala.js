@@ -34,6 +34,7 @@ class AddCamaToSala extends Component {
             if (response.data != null) {
                 this.setState(this.initialState);
                 alert("Cama agregada");
+                this.props.history.push("/ver-recuperacion/" + this.state.idSala);
             }
         });
   }

@@ -35,6 +35,9 @@ class Recuperacion extends Component {
     recuperacionService.deleteRecuperacion(recuperacionId)
         .then((response) => console.log(response))
         .catch((error) => console.log(error));
+    this.setState({
+      recuperacion: this.state.recuperacion.filter(recuperacion => recuperacion.id !== recuperacionId)
+    });
 }
 
   render() {

@@ -35,6 +35,9 @@ class CamasRecuperacion extends Component {
     camaService.deleteCama(camaId)
         .then((response) => console.log(response))
         .catch((error) => console.log(error));
+        this.setState({
+          camas: this.state.camas.filter(cama => cama.id !== camaId)
+        });
 }
 
   render() {
@@ -45,7 +48,7 @@ class CamasRecuperacion extends Component {
         {/* Page Header */}
         <Row noGutters className="page-header py-4">
         <Link style={{ marginRight: "00px" }} to={"crear-cama-recuperacion"} className="btn btn-sm">Agregar</Link>
-          <PageTitle sm="4" title="Salas de cama" subtitle="" className="text-sm-left" />
+          <PageTitle sm="4" title="Camas de Recuperación" subtitle="" className="text-sm-left" />
         </Row>
 
         <Row>
