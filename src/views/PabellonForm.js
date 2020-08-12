@@ -111,7 +111,6 @@ class PabellonForm extends Component {
                           {this.state.id ? <Form.Group controlId="formGridEstado">
                             <Form.Label>Estado</Form.Label>
                             <Form.Control as="select" required type="text" name="estado" value={this.state.estado} onChange={this.pabellonChange} placeholder="Libre/Ocupado">
-                              <option></option>
                               <option>Disponible</option>
                               <option>Ocupado</option>
                             </Form.Control>

@@ -104,7 +104,6 @@ class CamaForm extends Component {
                       {this.state.id ? <Form.Group controlId="formGridestado" style={{ marginLeft: "10px" }}>
                         <Form.Label>Estado</Form.Label>
                         <Form.Control as="select" required type="text" name="estado" value={this.state.estado} onChange={this.camaChange}>
-                          <option></option>
                           <option>Disponible</option>
                           <option>Ocupado</option>
                         </Form.Control>
