@@ -50,9 +50,6 @@ class AddCamaToSala extends Component {
     return (
       <Container fluid className="main-content-container px-4 pb-4">
         {/* Page Header */}
-        <Row noGutters className="page-header py-4">
-          <PageTitle sm="4" title="" subtitle="" className="text-sm-left" />
-        </Row>
         <Row>
           <Col lg={12} style={{ marginTop: "20px" }}>
             <Card>

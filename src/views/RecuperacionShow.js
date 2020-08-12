@@ -52,6 +52,10 @@ class RecuperacionShow extends Component {
     camaService.removeCama(data)
       .then((response) => console.log(response))
       .catch((error) => console.log(error));
+
+    this.setState({
+      camas: this.state.camas.filter(cama => cama !== camaId)
+    });
   }
 
   render() {
@@ -61,8 +65,9 @@ class RecuperacionShow extends Component {
       <Container fluid className="main-content-container px-4">
         {/* Page Header */}
         <Row noGutters className="page-header py-4">
-        <Link style={{ marginRight: "00px" }} to={"/agregar-cama-recuperacion/" + this.idRecuperacion} className="btn btn-sm">Agregar Cama</Link>
+          <Link style={{ marginRight: "00px" }} to={"/recuperacion"} className="btn btn-outline-light">{"< Volver"}</Link>
           <PageTitle sm="4" title={"Sala de Recuperacion " + this.idRecuperacion} subtitle="" className="text-sm-left" />
+          <Link style={{ marginRight: "00px" }} to={"/agregar-cama-recuperacion/" + this.idRecuperacion} className="btn btn-sm btn-outline-primary">Agregar Cama</Link>
         </Row>
 
         <Row>
