@@ -47,10 +47,10 @@ class CamasRecuperacion extends Component {
       <Container fluid className="main-content-container px-4">
         {/* Page Header */}
         <Row noGutters className="page-header py-4">
-        <Link style={{ marginRight: "00px" }} to={"crear-cama-recuperacion"} className="btn btn-sm">Agregar</Link>
+          <Link style={{ marginRight: "00px" }} to={"recuperacion"} className="btn btn-outline-light">{"< Volver"}</Link>
           <PageTitle sm="4" title="Camas de Recuperación" subtitle="" className="text-sm-left" />
+          <Link style={{ marginRight: "00px" }} to={"crear-cama-recuperacion"} className="btn btn-sm btn-outline-primary">Nueva Cama</Link>
         </Row>
-
         <Row>
           {camas.map((cama, index) => {
             return (

@@ -35,7 +35,7 @@ class RecuperacionForm extends Component {
   }
 
   submitRecuperacion = event => {
-    alert('Piso: ' + this.state.piso + '\nnumero ' + this.state.numero);
+    //alert('Piso: ' + this.state.piso + '\nnumero ' + this.state.numero);
     event.preventDefault();
 
     const recuperacion = {

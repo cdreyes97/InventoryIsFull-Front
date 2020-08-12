@@ -35,7 +35,7 @@ class CamaForm extends Component {
   }
 
   submitCama = event => {
-    alert('descripcion: ' + this.state.descripcion + '\nestado ' + this.state.estado);
+    //alert('descripcion: ' + this.state.descripcion + '\nestado ' + this.state.estado);
     event.preventDefault();
 
     const cama = {
@@ -77,7 +77,8 @@ class CamaForm extends Component {
         .then(response => {
             if (response.data != null) {
                 this.setState(this.initialState);
-                alert("cama Editado");
+                alert("Cama Editada");
+                this.props.history.push('/camas-recuperacion');
             }
         });
     }
@@ -87,9 +88,6 @@ class CamaForm extends Component {
     return (
       <Container fluid className="main-content-container px-4 pb-4">
         {/* Page Header */}
-        <Row noGutters className="page-header py-4">
-          <PageTitle sm="4" title="" subtitle="" className="text-sm-left" />
-        </Row>
         <Row>
           <Col lg={12} style={{ marginTop: "20px" }}>
             <Card>
@@ -101,10 +99,12 @@ class CamaForm extends Component {
                         <Form.Label>Descripcion</Form.Label>
                         <Form.Control required type="text" name="descripcion" value={this.state.descripcion} onChange={this.camaChange} placeholder="Descripcion" />
                       </Form.Group>
-
                       <Form.Group controlId="formGridestado" style={{ marginLeft: "10px" }}>
                         <Form.Label>Estado</Form.Label>
-                        <Form.Control required type="text" name="estado" value={this.state.estado} onChange={this.camaChange} placeholder="Libre/Ocupado" />
+                        <Form.Control as="select" required type="text" name="estado" value={this.state.estado} onChange={this.camaChange} placeholder="Libre/Ocupado">
+                          <option>Libre</option>
+                          <option>Ocupado</option>
+                        </Form.Control>
                       </Form.Group>
                       </Form.Row>
                         </Card.Body>

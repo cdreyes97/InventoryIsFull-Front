@@ -35,7 +35,7 @@ class PabellonForm extends Component {
   }
 
   submitPabellon = event => {
-    alert('Sala: ' + this.state.sala + '\nDescripcion ' + this.state.descripcion + '\nEstado: ' + this.state.estado);
+    //alert('Sala: ' + this.state.sala + '\nDescripcion ' + this.state.descripcion + '\nEstado: ' + this.state.estado);
     event.preventDefault();
 
     const pabellon = {
@@ -110,7 +110,10 @@ class PabellonForm extends Component {
                         <Form.Row>
                           <Form.Group controlId="formGridEstado">
                             <Form.Label>Estado</Form.Label>
-                            <Form.Control required type="text" name="estado" value={this.state.estado} onChange={this.pabellonChange} placeholder="Libre/Ocupado" />
+                            <Form.Control as="select" required type="text" name="estado" value={this.state.estado} onChange={this.pabellonChange} placeholder="Libre/Ocupado">
+                              <option>Libre</option>
+                              <option>Ocupado</option>
+                            </Form.Control>
                           </Form.Group>
                         </Form.Row>
                         </Card.Body>
