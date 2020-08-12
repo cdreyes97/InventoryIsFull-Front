@@ -57,7 +57,7 @@ class CamasRecuperacion extends Component {
               <Col lg="2" key={cama.id}>
                 <Card small className="card-post mb-4" style={{width: "175px"}}>
                   <CardBody>
-                    <h6 className="card-title">ID {cama.id}</h6>
+                    <h6 className="card-title">Cama {cama.id}</h6>
                     <h6 className="card-title">{cama.descripcion}</h6>
                     <h6 className="card-title">{cama.estado}</h6>
                     <ButtonGroup>

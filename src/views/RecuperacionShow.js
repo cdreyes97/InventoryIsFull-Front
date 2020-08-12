@@ -76,7 +76,7 @@ class RecuperacionShow extends Component {
               <Col lg="2" key={cama} style={{marginLeft: "30px"}}>
                 <Card Large className="card-post mb-4 " style={{width: "210px"}}>
                   <CardBody >
-                    <h6 className="card-title">Id {cama}</h6>
+                    <h6 className="card-title">Cama {cama}</h6>
                   </CardBody>
                   <ButtonGroup>
                         <Button style={{ marginLeft: "00px" }} onClick={this.removeCamaFromRecuperacion.bind(this, cama)}>Borrar</Button>
