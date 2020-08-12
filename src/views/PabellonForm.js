@@ -108,14 +108,14 @@ class PabellonForm extends Component {
                       </Form.Group>
                       </Form.Row>
                         <Form.Row>
-                          <Form.Group controlId="formGridEstado">
+                          {this.state.id ? <Form.Group controlId="formGridEstado">
                             <Form.Label>Estado</Form.Label>
                             <Form.Control as="select" required type="text" name="estado" value={this.state.estado} onChange={this.pabellonChange} placeholder="Libre/Ocupado">
                               <option></option>
                               <option>Disponible</option>
                               <option>Ocupado</option>
                             </Form.Control>
-                          </Form.Group>
+                          </Form.Group> : null}
                         </Form.Row>
                         </Card.Body>
                           <Card.Footer>

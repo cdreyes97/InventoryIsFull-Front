@@ -99,15 +99,17 @@ class CamaForm extends Component {
                         <Form.Label>Descripcion</Form.Label>
                         <Form.Control required type="text" name="descripcion" value={this.state.descripcion} onChange={this.camaChange} placeholder="Descripcion" />
                       </Form.Group>
-                      <Form.Group controlId="formGridestado" style={{ marginLeft: "10px" }}>
+                    </Form.Row>
+                    <Form.Row>
+                      {this.state.id ? <Form.Group controlId="formGridestado" style={{ marginLeft: "10px" }}>
                         <Form.Label>Estado</Form.Label>
                         <Form.Control as="select" required type="text" name="estado" value={this.state.estado} onChange={this.camaChange}>
                           <option></option>
                           <option>Disponible</option>
                           <option>Ocupado</option>
                         </Form.Control>
-                      </Form.Group>
-                      </Form.Row>
+                      </Form.Group> : null}
+                    </Form.Row>
                         </Card.Body>
                           <Card.Footer>
                             <Button variant="success" type="submit">
