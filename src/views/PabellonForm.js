@@ -121,9 +121,6 @@ class PabellonForm extends Component {
                             <Button variant="success" type="submit">
                               {this.state.id ? "Update" : "Submit"}
                             </Button>{' '}
-                            <Button variant="info" type="reset">
-                              Reset
-                            </Button>
                           </Card.Footer>
                             </Form>
             </Card>
